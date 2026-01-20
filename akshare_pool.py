@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
-
+import time
 # 股池
 
 from typing import List
@@ -48,8 +48,12 @@ def get_zt_pool_dtgc_em(date_str: str) -> List[List]:
 
 
 if __name__ == "__main__":
-    print(get_zt_pool_em("20260120"))
-    print(get_zt_pool_previous_em("20260120"))
-    print(get_zt_pool_strong_em("20260120"))
-    print(get_zt_pool_zbgc_em("20260120"))
-    print(get_zt_pool_dtgc_em("20260120"))
+    from __init__ import get_date_str_from_timestamp
+
+    date_str = get_date_str_from_timestamp(int(time.time()))
+
+    print(get_zt_pool_em(date_str))
+    print(get_zt_pool_previous_em(date_str))
+    print(get_zt_pool_strong_em(date_str))
+    print(get_zt_pool_zbgc_em(date_str))
+    print(get_zt_pool_dtgc_em(date_str))
