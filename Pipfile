@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 akshare = "1.18.14"
+requests = "2.32.5"
 
 [dev-packages]
 
