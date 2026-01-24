@@ -31,13 +31,6 @@ def get_hot_rank_detail_realtime_em(symbol) -> List[List]:
     return hot_rank_detail_realtime_em_df[["时间", "排名"]].values.tolist()
 
 
-# 百度股市通热搜股票
-# 测试此接口已失效
-def get_hot_search_baidu(date_str: str):
-    hot_search_baidu_df = ak.stock_hot_search_baidu(symbol="A股", date=date_str, time="今日")
-    return hot_search_baidu_df[["名称/代码", "涨跌幅", "综合热度"]].values.tolist()
-
-
 # 个股相关概念热度
 def get_hot_keyword_em(symbol) -> List[List]:
     hot_keyword_em_df = ak.stock_hot_keyword_em(symbol)
@@ -61,7 +54,6 @@ if __name__ == '__main__':
     print(get_hot_up_em())
     print(get_hot_rank_detail_em("SH600089"))
     print(get_hot_rank_detail_realtime_em("SH600089"))
-    print(get_hot_search_baidu("20260109"))
     print(get_hot_keyword_em("SH600089"))
     print(get_hot_rank_latest_em("SH600089"))
     print(get_hot_rank_relate_em("SH600089"))
