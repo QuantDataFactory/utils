@@ -36,5 +36,5 @@ def get_index_stock_cons_weight_csindex(symbol: str) -> List[List]:
 if __name__ == "__main__":
     print(get_index_stock_info())
     print(get_index_stock_cons("000300"))
-    print(get_index_stock_cons_csindex("000905"))
+    print(get_index_stock_cons_csindex("000300"))
     print(get_index_stock_cons_weight_csindex("000300"))
