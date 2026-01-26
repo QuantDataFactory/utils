@@ -22,7 +22,7 @@ def get_hot_up_em() -> List[List]:
 # 个股人气排行榜历史趋势(过去365天数据 以天为周期）
 def get_hot_rank_detail_em(symbol) -> List[List]:
     hot_rank_detail_em_df = ak.stock_hot_rank_detail_em(symbol)
-    return hot_rank_detail_em_df[["时间", "排名", "证券代码", "新晋粉丝", "铁杆粉丝"]].values.tolist()[:-1]
+    return hot_rank_detail_em_df[["时间", "排名", "证券代码", "新晋粉丝", "铁杆粉丝"]].values.tolist()
 
 
 # 个股人气排行榜实时变动(当日数据 以10分钟为周期)
